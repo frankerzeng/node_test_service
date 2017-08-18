@@ -31,4 +31,7 @@ function eventFunction1(param1, param2) {
     console.info("chufa----tgg--" + param1 + param2);
 }
 
+router.ini = function () {
+    console.log(11212);
+}
 module.exports = router;
