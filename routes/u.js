@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    console.log('u -------------');
+    console.log('u -----dd--------');
     console.log(url.parse(req.url).query);
     console.log(url.parse(req.url).pathname);
     console.log(querystring.parse(req.url)['p']);
