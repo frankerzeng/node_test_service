@@ -8,11 +8,6 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     console.log('u -----dd--dd------');
     console.log('u -----dd--dd------');
-    console.log('u -----dd--dd------');
-    console.log('u -----dd--dd------');
-    console.log('u -----dd--dd------');
-    console.log('u -----dd--dd------');
-    console.log('u -----dd--dd------');
     console.log(url.parse(req.url).query);
     console.log(url.parse(req.url).pathname);
     console.log(querystring.parse(req.url)['p']);
