@@ -31,30 +31,15 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-    console.log('-------');
-
-    var body = '';
-    req.on('data', function (data) {
-        body += data;
-        console.info(util.inspect(body));
-    });
-    req.on('end', function () {
-        // 解析参数
-        body = querystring.parse(body);
-        console.log(body);
-
-        // 设置响应头部信息及编码
-        res.writeHead(200, {'Content-Type': 'text/html; charset=utf8'});
-
-        if (body.name && body.url) { // 输出提交的数据
-            res.write("网站名：" + body.name);
-            res.write("<br>");
-            res.write("网站 URL：" + body.url);
-        } else {  // 输出表单
-            res.write(postHTML);
-        }
-        res.end();
-    });
+    // 设置响应头部信息及编码
+    var body = {name: "", title: ""};
+    body.name = req.body.name;
+    body.url = req.body.url;
+    res.write("网站名：" + body.name);
+    res.write("<br>");
+    res.write("网站 URL：" + body.url);
+    // res.writeHead(200, {'Content-Type': 'text/html; charset=utf8'});
+    res.end();
 });
 
 module.exports = router;
