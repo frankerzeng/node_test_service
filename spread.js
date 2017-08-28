@@ -18,7 +18,7 @@ Date.prototype.format = function (format) {
         }
     }
     return format;
-}
+};
 
 var data = [];
 var index = 0;

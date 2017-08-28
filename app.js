@@ -11,7 +11,8 @@ var u = require('./routes/u');
 var demo1 = require('./routes/demo1');
 
 var app = express();
-
+// port
+app.set('port', 8081);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
