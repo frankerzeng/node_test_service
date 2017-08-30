@@ -31,13 +31,14 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-    // 设置响应头部信息及编码
     var body = {name: "", title: ""};
     body.name = req.body.name;
     body.url = req.body.url;
     res.write("网站名：" + body.name);
     res.write("<br>");
     res.write("网站 URL：" + body.url);
+
+    // 设置响应头部信息及编码
     // res.writeHead(200, {'Content-Type': 'text/html; charset=utf8'});
     res.end();
 });

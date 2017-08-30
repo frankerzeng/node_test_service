@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var u = require('./routes/u');
-var demo1 = require('./routes/demo1');
+var post = require('./routes/post');
+var mysql = require('./routes/mysql');
 
 var app = express();
 // port
@@ -28,7 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/u', u);
-app.use('/demo1', demo1);
+app.use('/post', post);
+app.use('/mysql', mysql);
 
 users.ini();
 
