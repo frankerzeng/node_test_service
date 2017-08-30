@@ -5,11 +5,12 @@ var util = require("util");
 var mysqlHelper = {
     query: function (query) {
         connection.connect();
-        connection.query(query, function (err, rows, fields) {
+        var rst = connection.query(query, function (err, rows, fields) {
             if (err) throw err;
+            connection.release();
             return rows;
         });
-        connection.close();
+        return rst;
     }
 };
 var connection = mysql.createConnection({
