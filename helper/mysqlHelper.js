@@ -7,9 +7,9 @@ var mysqlHelper = {
         connection.connect();
         var rst = connection.query(query, function (err, rows, fields) {
             if (err) throw err;
-            connection.release();
             return rows;
         });
+        connection.close();
         return rst;
     }
 };
