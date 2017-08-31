@@ -3,20 +3,21 @@ var config = require("../config/mysql");
 var util = require("util");
 
 var mysqlHelper = {
-    query: function (query) {
-        connection.connect();
-        var rst = connection.query(query, function (err, rows, fields) {
-            if (err) throw err;
-            return rows;
+    query: function (query, callback) {
+        var connection = mysql.createConnection({
+            host: config.host,
+            user: config.user,
+            password: config.password
         });
-        connection.close();
-        return rst;
+        connection.connect();
+        connection.query(query, function (err, rows, fields) {
+            if (err) throw err;
+            rows = JSON.stringify(rows);
+            callback(rows);
+        });
+
+        connection.end();
     }
 };
-var connection = mysql.createConnection({
-    host: config.host,
-    user: config.user,
-    password: config.password
-});
 
 module.exports = mysqlHelper;
