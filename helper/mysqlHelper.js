@@ -22,7 +22,8 @@ var mysqlHelper = {
             if (err) throw err;
             rows = JSON.stringify(rows);
             callback(rows);
-            connection.end();
+            connection.releaseConnection(connection);
+
         });
     }
 };
