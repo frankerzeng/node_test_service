@@ -4,10 +4,11 @@
 </template>
 
 <script>
-    module.exports = {
-        el: "p",
-        data: {
-            greeting: "hello"
+    export default{
+        data() {
+            return {
+                greeting: "hello"
+            }
         }
     };
 </script>
