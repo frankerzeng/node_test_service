@@ -9,7 +9,6 @@ gulp.task('default', ['bundle'], function () {
 });
 
 gulp.task('bundle', function () {
-    console.log(mapFiles(appList, 'vue'));
     return gulp.src(mapFiles(appList, 'vue'))
         .pipe(named())
         .pipe(webpack(getConfig()))
@@ -17,7 +16,7 @@ gulp.task('bundle', function () {
 });
 
 gulp.task('watch', function () {
-    return gulp.src(mapFiles(appList, 'js'))
+    return gulp.src(mapFiles(appList, 'vue'))
         .pipe(named())
         .pipe(webpack(getConfig({watch: true})))
         .pipe(gulp.dest('dist/'))

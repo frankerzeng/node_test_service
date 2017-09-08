@@ -1,15 +1,15 @@
 <template>
     <p>{{ greeting }} world</p>
+    <span :src=""></span>
 </template>
 
 <script>
     module.exports = {
-        data: function () {
-            return {
-                greeting: "hello"
-            }
+        el: "p",
+        data: {
+            greeting: "hello"
         }
-    }
+    };
 </script>
 
 <style scoped>
