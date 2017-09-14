@@ -10,6 +10,13 @@ module.exports = {
     },
     module: {
         rules: [
+            // 前置 JS代码检验
+            // {
+            //     enforce: 'pre',
+            //     test: /\.vue$/,
+            //     loader: 'eslint-loader',
+            //     exclude: /node_modules/
+            // },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
@@ -53,7 +60,7 @@ module.exports = {
         hints: false
     },
     devtool: '#eval-source-map'
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
