@@ -6,6 +6,7 @@
         <p>
             <router-link to="/detail">detail</router-link>
             <router-link to="/tech">tech</router-link>
+            <router-link to="/list">list</router-link>
         </p>
 
         <!--路由匹配的组件渲染位置-->
