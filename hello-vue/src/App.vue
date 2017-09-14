@@ -3,9 +3,15 @@
         <img src="./assets/logo.png">
         <h1>{{ msg }}</h1>
         <h2>Essential Ldddinks</h2>
-        <ul>
-        </ul>
+        <p>
+            <router-link to="/detail">detail</router-link>
+            <router-link to="/tech">tech</router-link>
+        </p>
+
+        <!--路由匹配的组件渲染位置-->
+        <router-view></router-view>
     </div>
+
 </template>
 
 <script>
