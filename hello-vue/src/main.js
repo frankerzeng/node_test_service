@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router';
 import App from './App.vue'
 import List from './List.vue'
+import ScrollBehavior from './page/ScrollBehavior.vue'
 
 // 必须写use，使用路由
 Vue.use(VueRouter);
@@ -12,10 +13,11 @@ const Tech = {template: "<div>te</div>"};
 const routes = [
     {path: "/detail", component: Detail},
     {path: "/tech", component: Tech},
-    {path: "/listParam", param: {userId: 111}, component: List},
+    {path: "/listParam", query: {userId: 111}, component: List},
 
     // 懒加载
-    {path: "/list", component: () => require('./List.vue')},
+    {path: "/list", component: resolve => require(['./List.vue'], resolve)},
+    {path: "/ScrollBehavior", component: resolve => require(['./page/ScrollBehavior.vue'], resolve)},
 
     // 嵌套路由
     {

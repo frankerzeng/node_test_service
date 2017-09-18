@@ -8,6 +8,7 @@
             <router-link to="/tech">tech</router-link>
             <router-link to="/listParam">listParam</router-link>
             <router-link to="/list">list</router-link>
+            <router-link to="/ScrollBehavior">ScrollBehavior</router-link>
         </p>
 
         <!--路由匹配的组件渲染位置-->
