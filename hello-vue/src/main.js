@@ -12,6 +12,7 @@ const Tech = {template: "<div>te</div>"};
 const routes = [
     {path: "/detail", component: Detail},
     {path: "/tech", component: Tech},
+    {path: "/listParam", param: {userId: 111}, component: List},
 
     // 懒加载
     {path: "/list", component: () => require('./List.vue')},

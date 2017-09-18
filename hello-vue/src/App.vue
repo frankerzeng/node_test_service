@@ -6,6 +6,7 @@
         <p>
             <router-link to="/detail">detail</router-link>
             <router-link to="/tech">tech</router-link>
+            <router-link to="/listParam">listParam</router-link>
             <router-link to="/list">list</router-link>
         </p>
 
