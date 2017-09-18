@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="scrollId">
         <h1>{{ msg }}</h1>
         <h2>Essential Ldddinks</h2>
         <div>
@@ -38,7 +38,7 @@
     Vue.use(VueScroller);
 
     export default {
-        name: 'app',
+        name: 'scrollId',
         data () {
             return {
                 msg: 'ScrollBehavior.vue'
@@ -77,17 +77,12 @@
 </script>
 
 <style lang="scss">
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 100px;
-    }
-
     div {
-        height: 50%;
+        height: 100%;
+        left: 0;
+        width: 100%;
+        bottom: 1*100rem;
+        background: #F5F5F5;
     }
 
     p {
