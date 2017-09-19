@@ -18,6 +18,7 @@ const routes = [
     // 懒加载
     {path: "/list", component: resolve => require(['./List.vue'], resolve)},
     {path: "/ScrollBehavior", component: resolve => require(['./page/ScrollBehavior.vue'], resolve)},
+    {path: "/GetData", component: resolve => require(['./page/GetData.vue'], resolve)},
 
     // 嵌套路由
     {

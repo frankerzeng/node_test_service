@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var u = require('./routes/u');
 var post = require('./routes/post');
 var mysql = require('./routes/mysql');
+var list = require('./routes/list');
 
 var app = express();
 // port
@@ -31,6 +32,7 @@ app.use('/users', users);
 app.use('/u', u);
 app.use('/post', post);
 app.use('/mysql', mysql);
+app.use('/list', list);
 
 users.ini();
 

@@ -2,19 +2,24 @@
     <div id="app">
         <img src="./assets/logo.png">
         <h1>{{ msg }}</h1>
-        <h2>Essential Ldddinks</h2>
         <p>
-            <router-link to="/detail">detail</router-link><br>
-            <router-link to="/tech">tech</router-link><br>
-            <router-link to="/listParam">listParam</router-link><br>
-            <router-link to="/list">list</router-link><br>
-            <router-link to="/ScrollBehavior">ScrollBehavior</router-link><br>
+            <router-link to="/detail">detail</router-link>
+            <br>
+            <router-link to="/tech">tech</router-link>
+            <br>
+            <router-link to="/listParam">listParam</router-link>
+            <br>
+            <router-link to="/list">list</router-link>
+            <br>
+            <router-link to="/ScrollBehavior">ScrollBehavior</router-link>
+            <br>
+            <router-link to="/GetData">get_data</router-link>
+            <br>
         </p>
 
         <!--路由匹配的组件渲染位置-->
         <router-view></router-view>
     </div>
-
 </template>
 
 <script>
@@ -29,6 +34,10 @@
 </script>
 
 <style lang="scss">
+    img {
+        width: 20%;
+    }
+
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
