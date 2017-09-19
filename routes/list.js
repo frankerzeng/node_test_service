@@ -6,8 +6,11 @@ var url = require('url');
 /* GET users listing. */
 router.get('/', function (req, res, next) {
     var arg = url.parse(req.url, true).query;
+    var page = arg.page;
+
+    // GET 参数
     console.log(arg);
-    var page = arg.page
+
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
