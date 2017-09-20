@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../libraries/layui/src/css/layui.css">
+    <style>
+        /* 示例 */
+        .layui-field-title {
+            margin-top: 30px;
+        }
+
+        .grid-demo {
+            padding: 10px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+        }
+        #contentId{
+            padding: 10px;
+            line-height: 50px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .grid-demo-bg1 {
+            background-color: #63BA79;
+        }
+
+        .grid-show-no {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-col-sm3">
+            <div class="grid-demo grid-demo-bg1">
+                    <a href="/">Home</a>
+            </div>
+        </div>
+        <div class="layui-col-sm3">
+            <div class="grid-show-no layui-bg-green"></div>
+        </div>
+        <div class="layui-col-sm3">
+            <div class="grid-show-no layui-bg-red"></div>
+        </div>
+        <div class="layui-col-sm3">
+            <div class="grid-demo">
+                <button class="layui-btn layui-btn-black layui-btn-radius">login</button>
+                <button class="layui-btn layui-btn-black layui-btn-radius" id="logId">更新日志</button>
+            </div>
+        </div>
+        <div>
+            <div class="layui-col-xs8 layui-col-sm7 layui-col-md8">
+                <div style="border: #ff1228 dashed 1px" id="contentId">
+                    内容
+                </div>
+            </div>
+            <div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
+                <div class="grid-demo layui-bg-black">
+                    菜单
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../libraries/layui/src/layui.js"  charset="utf-8"></script>
+<script>
+    console.log(2123);
+
+    layui.use(['jquery','layer', 'form'], function () {
+        console.log(2123);
+
+        var layer = layui.layer,
+            form = layui.form,
+            $ = layui.$;
+        $("#logId").on('click',function () {
+            $("#contentId").load('./page/time_line.html');
+        })
+    })
+</script>
+</body>
+</html>
