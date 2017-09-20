@@ -40,9 +40,12 @@
             async fetchData(){
                 this.error = this.post = null;
                 this.loading = true;
-                var rest = await getList(1);
-                console.log(rest);
-                this.post = rest;
+                var rest = await getList(1).then(rest => {
+                        console.log(rest);
+                        this.loading = false;
+                        this.post = rest;
+                    }
+                )
             }
         }
     }

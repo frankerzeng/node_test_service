@@ -8,6 +8,8 @@ router.get('/', function (req, res, next) {
     var arg = url.parse(req.url, true).query;
     var page = arg.page;
 
+    for (var i = 0; i < 10000; i++) {
+    }
     // GET 参数
     console.log(arg);
 
