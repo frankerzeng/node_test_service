@@ -3,9 +3,11 @@ import VueRouter from 'vue-router';
 import App from './App.vue'
 import List from './List.vue'
 import ScrollBehavior from './page/ScrollBehavior.vue';
+// jquery
 import $ from 'jquery/dist/jquery';
-import 'bootstrap/js/bootstrap';
-import 'bootstrap/css/bootstrap.min.css';
+// bootstrap
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 // 必须写use，使用路由
 Vue.use(VueRouter);

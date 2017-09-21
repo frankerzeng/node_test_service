@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -35,6 +35,14 @@ module.exports = {
                 }
             },
             {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf)([\?]?.*)$/,
+                loader: "file-loader"
+            },
+            {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
@@ -66,7 +74,8 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             jQuery: "jquery",
-            $: "jquery"
+            $: "jquery",
+            "windows.jQuery": "jquery"
         })
     ]
 };

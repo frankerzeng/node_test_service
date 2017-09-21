@@ -7,13 +7,6 @@
 
     </div>
 
-    <hr>
-    <table class="table">
-        <caption class="h3 text-info">
-            用户信息
-        </caption>
-
-    </table>
 
 </template>
 
