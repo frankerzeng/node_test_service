@@ -2,7 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router';
 import App from './App.vue'
 import List from './List.vue'
-import ScrollBehavior from './page/ScrollBehavior.vue'
+import ScrollBehavior from './page/ScrollBehavior.vue';
+import $ from 'jquery/dist/jquery';
+import 'bootstrap/js/bootstrap';
+import 'bootstrap/css/bootstrap.min.css';
 
 // 必须写use，使用路由
 Vue.use(VueRouter);
@@ -19,6 +22,7 @@ const routes = [
     {path: "/list", component: resolve => require(['./List.vue'], resolve)},
     {path: "/ScrollBehavior", component: resolve => require(['./page/ScrollBehavior.vue'], resolve)},
     {path: "/GetData", component: resolve => require(['./page/GetData.vue'], resolve)},
+    {path: "/demo_table", component: resolve => require(['./page/demo_table.vue'], resolve)},
 
     // 嵌套路由
     {

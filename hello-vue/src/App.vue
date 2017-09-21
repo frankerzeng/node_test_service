@@ -15,6 +15,8 @@
             <br>
             <router-link to="/GetData">get_data</router-link>
             <br>
+            <router-link to="/demo_table">bootstrap demo_table</router-link>
+            <br>
         </p>
 
         <!--路由匹配的组件渲染位置-->
