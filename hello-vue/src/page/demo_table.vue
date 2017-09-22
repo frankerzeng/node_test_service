@@ -1,5 +1,8 @@
 <template>
     <div id="contentId">
+        <h2>{{name | uppercase}}</h2>
+        <h2 v-once>{{name | uppercase}}</h2>
+        <h2 v-html="name"></h2>
         <div id="formId">
             <div class="form-group">
                 <label for="age"> age :</label>
@@ -66,6 +69,7 @@
         name: 'contentId',
         data () {
             return {
+                test:"t",
                 name: '',
                 confirm_title: "确认删除",
                 status: 0,//按钮状态 0 删除行，1 删除全部

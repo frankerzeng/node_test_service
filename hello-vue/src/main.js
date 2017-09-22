@@ -1,16 +1,27 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue'
 import List from './List.vue'
-import ScrollBehavior from './page/ScrollBehavior.vue';
-// jquery
+import VueResource from 'vue-resource';
+
+// 引入jquery
 import $ from 'jquery/dist/jquery';
-// bootstrap
+
+// 引入bootstrap
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // 必须写use，使用路由
 Vue.use(VueRouter);
+
+// 使用vue resource 获得数据
+Vue.use(VueResource);
+
+// V2.0+ 已废弃过滤器
+// 自定义过滤器
+Vue.filter('uppercase', function (value) {
+    return value.toUpperCase();
+});
 
 const Detail = {template: "<div>de</div>"};
 const Tech = {template: "<div>te</div>"};
@@ -25,6 +36,7 @@ const routes = [
     {path: "/ScrollBehavior", component: resolve => require(['./page/ScrollBehavior.vue'], resolve)},
     {path: "/GetData", component: resolve => require(['./page/GetData.vue'], resolve)},
     {path: "/demo_table", component: resolve => require(['./page/demo_table.vue'], resolve)},
+    {path: "/vue_resource", component: resolve => require(['./page/demo_vue_resource.vue'], resolve)},
 
     // 嵌套路由
     {
