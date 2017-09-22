@@ -16,12 +16,12 @@
         <table class="table table-bordered table-hover">
             <caption class="h3">列表</caption>
             <tr>
-                <th class="text-center">名字</th>
-                <th class="text-center">操作</th>
+                <th class="text-center table-bordered ">名字</th>
+                <th class="text-center table-bordered ">操作</th>
             </tr>
             <tr v-for="(v,k) in list">
-                <td>{{v.name}}</td>
-                <td>
+                <td class="table-bordered table-hover">{{v.name}}</td>
+                <td class="table-bordered table-hover">
                     <button class="btn btn-sm btn-danger" v-on:click="changeStatus(0,k)" data-toggle="modal"
                             data-target="#myModal">删除
                     </button>
@@ -46,7 +46,7 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">确认删除</h4>
+                        <h4 class="modal-title" id="myModalLabel">{{confirm_title}}</h4>
                     </div>
                     <!--<div class="modal-body">-->
                     <!---->
@@ -67,14 +67,16 @@
         data () {
             return {
                 name: '',
+                confirm_title: "确认删除",
                 status: 0,//按钮状态 0 删除行，1 删除全部
                 index: -1,
-                list: [{name: 33}, {name: 33}]
+                list: [{name: 33}, {name: 33}],
+                arr: ["sdf", 2]
             };
         },
         methods: {
             add: function () {
-                if (this.name == '') {
+                if (this.name === '') {
                     return;
                 }
                 this.list.push(
@@ -86,14 +88,20 @@
                 this.name = "";
             },
             delectAll: function () {
-                if (this.status == 1) {
+                if (this.status === 1) {
                     this.list = [];
-                } else if (this.status == 0) {
+                } else if (this.status === 0) {
                     this.list.splice(this.index, 1);
+                    console.log(this.arr.toString());
                 }
                 $("#myModal").modal('hide')
             },
             changeStatus: function (status, index) {
+                if (status === 1) {
+                    this.confirm_title = "确认删除全部";
+                } else {
+                    this.confirm_title = "确认删除";
+                }
                 this.status = status;
                 this.index = index;
             }
