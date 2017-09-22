@@ -42,7 +42,7 @@
             async fetchData(){
                 this.error = this.post = null;
                 this.loading = true;
-                getList().then(rest=> {
+                getList(11).then(rest=> {
                     console.log(rest);
                     console.log(22);
                     this.loading = false;
