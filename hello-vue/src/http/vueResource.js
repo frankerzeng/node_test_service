@@ -4,3 +4,4 @@
 import {baseUrl} from './../config/env';
 import Vue from 'vue';
 export const getList = (page) => Vue.http.get(baseUrl + '/list', {page: page});
+export const postList = (param) => Vue.http.post(baseUrl + '/list', param);

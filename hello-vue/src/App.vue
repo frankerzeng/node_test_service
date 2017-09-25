@@ -19,6 +19,8 @@
             <br>
             <router-link to="/vue_resource">vue_resource</router-link>
             <br>
+            <router-link to="/demo_event">demo_event.vue</router-link>
+            <br>
         </p>
 
         <!--路由匹配的组件渲染位置-->
