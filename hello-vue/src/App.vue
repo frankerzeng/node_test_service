@@ -21,6 +21,8 @@
             <br>
             <router-link to="/demo_event">demo_event</router-link>
             <br>
+            <router-link to="/demo_contribution">demo_contribution</router-link>
+            <br>
         </p>
 
         <!--路由匹配的组件渲染位置-->

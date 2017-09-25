@@ -6,8 +6,9 @@
 
         <br>
         <div @click="ev1($event)">
-            <input type="button" value="点击冒泡1" @click="ev2($event)"/>
-            <input type="button" value="点击冒泡2" @click.stop="ev2()"/>
+            <input type="button" value="点击冒泡1" @click="ev2()"/>
+            <input type="button" value="点击冒泡2" @click="ev2($event)"/>
+            <input type="button" value="点击冒泡" @click.stop="ev2()"/>
         </div>
 
         <br>
@@ -18,7 +19,7 @@
         <div>键盘事件</div>
         <input type="text" @keyup="ent($event)"/>
         <input type="text" @keydown="ent($event)"/>
-        <input type="text" @keydown.69="ent4()"/>
+        <input type="text" @keydown.69="ent4"/>
 
     </div>
 </template>
@@ -28,7 +29,8 @@
         name: 'contentId',
         data () {
             return {
-                data: ''
+                data: '',
+                cl:"btn"
             };
         },
         methods: {
@@ -56,7 +58,7 @@
             ent4:function () {
                 alert(11);
             }
-        }
+        },
     }
 </script>
 

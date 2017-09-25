@@ -12,6 +12,9 @@
             return {
                 msg: 'list '
             }
+        },
+        created:function () {
+            console.log("event11");
         }
     }
 </script>

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue'
-import List from './List.vue'
+import List from './page/List.vue'
 import VueResource from 'vue-resource';
 
 // 引入jquery
@@ -32,12 +32,12 @@ const routes = [
     {path: "/listParam", query: {userId: 111}, component: List},
 
     // 懒加载
-    {path: "/list", component: resolve => require(['./List.vue'], resolve)},
     {path: "/ScrollBehavior", component: resolve => require(['./page/ScrollBehavior.vue'], resolve)},
     {path: "/GetData", component: resolve => require(['./page/GetData.vue'], resolve)},
     {path: "/demo_table", component: resolve => require(['./page/demo_table.vue'], resolve)},
     {path: "/vue_resource", component: resolve => require(['./page/demo_vue_resource.vue'], resolve)},
     {path: "/demo_event", component: resolve => require(['./page/demo_event.vue'], resolve)},
+    {path: "/demo_contribution", component: resolve => require(['./page/demo_contribution.vue'], resolve)},
 
     // 嵌套路由
     {
