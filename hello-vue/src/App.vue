@@ -19,7 +19,7 @@
             <br>
             <router-link to="/vue_resource">vue_resource</router-link>
             <br>
-            <router-link to="/demo_event">demo_event.vue</router-link>
+            <router-link to="/demo_event">demo_event</router-link>
             <br>
         </p>
 
