@@ -23,6 +23,8 @@
             <br>
             <router-link to="/demo_contribution">demo_contribution</router-link>
             <br>
+            <router-link to="/demo_components">demo_components 组件</router-link>
+            <br>
         </p>
 
         <!--路由匹配的组件渲染位置-->
