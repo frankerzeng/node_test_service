@@ -5,7 +5,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
+                                aria-hidden="true" @click="close">&times;</span></button>
                         <h4 class="modal-title">{{title}}</h4>
                     </div>
                     <div class="modal-body">
@@ -26,21 +26,19 @@
         name: "one-component",
         data () {
             return {
-                class_: this.title === null ? "modal fade" : "modal fade in",
-                style_: this.title === null ? "display: none" : "display: block"
+                class_: "modal fade in",       //: "modal fade in",
+                style_: "display: block"     // : "display: block"
             };
         },
         props: ['title', 'content'],
         methods: {
             close(){
-                console.log(this.title);
-                this.class_ = 'modal fade';
-                this.style_ = 'display: none';
+                this.$emit('closeAlert');
             },
             doComponentMethod: function () {
                 console.log("----------------");
                 console.log("doComponentMethod");
-            }
+            },
         },
     };
 </script>

@@ -1,33 +1,46 @@
 <template>
     <div id="contentId">
         <button type="button" class="btn btn-primary" @click="one"> 弹出1</button>
-        <button type="button" class="btn btn-danger" @click="two"> 弹出2</button>
-        <demo-component-one :title="title" :content="content"></demo-component-one>
+
+        <!--父组件传参给子组件-->
+        <demo-component-one v-if="showAlert" :title="title" :content="content" @closeAlert="closeAlert"></demo-component-one>
+
+        <!--子组件传参给父组件-->
+        <div>
+            <p class="red">{{total}}</p>
+            <demo-component-two @addP="addP"></demo-component-two>
+        </div>
     </div>
 </template>
 
 <script>
     import demoComponentOne from './components/demo_component_one.vue';
+    import demoComponentTwo from './components/demo_component_two.vue';
     export default {
         name: 'contentId',
         data () {
             return {
+                showAlert: false,
                 title: null,
                 content: null,
+                total: 0
             };
         },
         methods: {
             one: function () {
+                this.showAlert = true;
                 this.title = "button 1";
                 this.content = "button 1";
             },
-            two: function () {
-                this.title = "button 2";
-                this.content = "button 2";
+            closeAlert(){
+                this.showAlert = false;
             },
+            addP: function () {
+                this.total++;
+            }
         },
         components: {
-            demoComponentOne
+            demoComponentOne, demoComponentTwo
         }
     }
 </script>
