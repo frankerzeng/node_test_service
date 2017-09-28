@@ -29,6 +29,8 @@
             <br>
             <router-link to="/demo_directives">自定义指令</router-link>
             <br>
+            <router-link to="/demo_mixins">demo_minins 混合</router-link>
+            <br>
         </p>
         <hr>
 

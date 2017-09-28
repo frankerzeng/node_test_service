@@ -41,6 +41,7 @@ const routes = [
     {path: "/demo_components", component: resolve => require(['./page/demo_components.vue'], resolve)},
     {path: "/demo_computed", component: resolve => require(['./page/demo_computed.vue'], resolve)},
     {path: "/demo_directives", component: resolve => require(['./page/demo_directives.vue'], resolve)},
+    {path: "/demo_mixins", component: resolve => require(['./page/demo_mixins.vue'], resolve)},
 
     // 嵌套路由
     {
