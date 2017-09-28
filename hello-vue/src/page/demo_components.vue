@@ -3,19 +3,29 @@
         <button type="button" class="btn btn-primary" @click="one"> 弹出1</button>
 
         <!--父组件传参给子组件-->
-        <demo-component-one v-if="showAlert" :title="title" :content="content" @closeAlert="closeAlert"></demo-component-one>
+        <demo-component-one v-if="showAlert" :title="title" :content="content"
+                            @closeAlert="closeAlert"></demo-component-one>
 
         <!--子组件传参给父组件-->
         <div>
             <p class="red">{{total}}</p>
             <demo-component-two @addP="addP"></demo-component-two>
         </div>
+
+        <!--兄弟组件通信-->
+        <div>
+            <demo-component-b-o></demo-component-b-o>
+            <demo-component-b-t></demo-component-b-t>
+        </div>
+
     </div>
 </template>
 
 <script>
     import demoComponentOne from './components/demo_component_one.vue';
     import demoComponentTwo from './components/demo_component_two.vue';
+    import demoComponentBO from './components/demo_component_brother_one.vue';
+    import demoComponentBT from './components/demo_component_brother_two.vue';
     export default {
         name: 'contentId',
         data () {
@@ -40,7 +50,7 @@
             }
         },
         components: {
-            demoComponentOne, demoComponentTwo
+            demoComponentOne, demoComponentTwo, demoComponentBO, demoComponentBT
         }
     }
 </script>
