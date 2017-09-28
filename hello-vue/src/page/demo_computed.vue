@@ -10,6 +10,9 @@
             <tr>
                 <td>{{add}}</td>
             </tr>
+            <tr>
+                <td>{{full}}</td>
+            </tr>
         </table>
     </div>
 </template>
@@ -20,13 +23,24 @@
         data () {
             return {
                 one: 0,
-                two: 0
+                two: 0,
             };
         },
-        methods: {},
+        methods: {
+        },
         computed: {
             add(){
                 return this.one + this.two;
+            },
+            full: {
+                get(){
+                    console.log("get");
+                    return this.one * this.two;
+
+                },
+                set(){
+                    console.log("set");
+                }
             }
         }
     };
