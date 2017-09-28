@@ -1,6 +1,6 @@
 <template xmlns:v-zfl="http://www.w3.org/1999/xhtml">
     <div id="y">
-        <div class="color" v-zfl:true.bg.ss="false">
+        <div class="color" v-zfl:true.bg.ss="test">
             首付就是两地分居胜利大街方式了的会计分录
             <button class="btn btn-primary" @click="one = !one">
                 改变
@@ -26,7 +26,8 @@
         name: "one-y",
         data () {
             return {
-                one: false
+                one: false,
+                test: "test data"
             };
         },
         methods: {},
