@@ -25,6 +25,10 @@
             <br>
             <router-link to="/demo_components">demo_components 组件</router-link>
             <br>
+            <router-link to="/demo_computed">计算属性</router-link>
+            <br>
+            <router-link to="/demo_directives">自定义指令</router-link>
+            <br>
         </p>
 
         <!--路由匹配的组件渲染位置-->
