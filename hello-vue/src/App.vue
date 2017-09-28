@@ -30,6 +30,7 @@
             <router-link to="/demo_directives">自定义指令</router-link>
             <br>
         </p>
+        <hr>
 
         <!--路由匹配的组件渲染位置-->
         <router-view></router-view>
