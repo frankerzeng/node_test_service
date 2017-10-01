@@ -20,12 +20,14 @@
         watch: {
             mobile: {
                 handler: function (val, oldval) {
+                    console.log("new:%s,oldval:%s", val, oldval);
                     if (!(/1[34578]\d{9}$/).test(val)) {
                         this.show = true;
                     } else {
                         this.show = false;
                     }
-                }
+                },
+                deep: true
             }
 
         }
