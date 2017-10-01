@@ -18,6 +18,12 @@
             <demo-component-b-t></demo-component-b-t>
         </div>
 
+        <!--插槽-slot-->
+        <demo-component-s>test</demo-component-s>
+        <demo-component-s-t>
+            <div slot="zf">test name</div>
+        </demo-component-s-t>
+
     </div>
 </template>
 
@@ -26,9 +32,12 @@
     import demoComponentTwo from './components/demo_component_two.vue';
     import demoComponentBO from './components/demo_component_brother_one.vue';
     import demoComponentBT from './components/demo_component_brother_two.vue';
+    import demoComponentS from './components/demo_component_slot.vue';
+    import demoComponentST from './components/demo_component_slot_two.vue';
+
     export default {
         name: 'contentId',
-        data () {
+        data() {
             return {
                 showAlert: false,
                 title: null,
@@ -42,7 +51,7 @@
                 this.title = "button 1";
                 this.content = "button 1";
             },
-            closeAlert(){
+            closeAlert() {
                 this.showAlert = false;
             },
             addP: function () {
@@ -50,7 +59,9 @@
             }
         },
         components: {
-            demoComponentOne, demoComponentTwo, demoComponentBO, demoComponentBT
+            demoComponentOne, demoComponentTwo, demoComponentBO, demoComponentBT,
+            demoComponentS,
+            demoComponentST,
         }
     }
 </script>
