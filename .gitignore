@@ -1,5 +1,5 @@
 .idea/*
-.idea/runConfigurations
+.idea/runConfigurations/*
 .idea/workspace.xml
 node_modules/*
 dist/*
