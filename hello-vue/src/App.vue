@@ -31,6 +31,8 @@
             <br>
             <router-link to="/demo_mixins">demo_mixins 混合</router-link>
             <br>
+            <router-link to="/demo_watch">demo_watch 观察者</router-link>
+            <br>
         </p>
         <hr>
 
