@@ -1,6 +1,6 @@
 <template>
     <div id="brother_two">
-        兄弟2：<h1>{{val}}</h1>
+        兄弟2：<input v-model="val"/>
     </div>
 </template>
 
@@ -9,13 +9,13 @@
 
     export default {
         name: "brother_two",
-        data () {
+        data() {
             return {
                 val: ''
             };
         },
         methods: {
-            begin(){
+            begin() {
                 let tmp = this;
                 bus.$on('receive', (data) => {
                     tmp.val = data.msg;
