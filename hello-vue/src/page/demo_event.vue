@@ -30,7 +30,7 @@
         data () {
             return {
                 data: '',
-                cl:"btn"
+                cl: "btn"
             };
         },
         methods: {
@@ -55,7 +55,7 @@
                     event.preventDefault();
                 }
             },
-            ent4:function () {
+            ent4: function () {
                 alert(11);
             }
         },
