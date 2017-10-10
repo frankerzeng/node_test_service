@@ -1,8 +1,7 @@
 <template>
     <div id="app">
-        <img src="./assets/logo.png">
-        <h1>{{ msg }}</h1>
-        <div id="demoContainId">
+        <h1 v-if="!show">{{ msg }}</h1>
+        <div id="demoContainId" v-if="!show">
             <h1 style="text-align: left">DEMO:</h1>
             <hr style="border: solid gray 1px">
             <div class="containDemoClass">
@@ -30,11 +29,13 @@
                 <br>
                 <router-link to="/demo_computed">计算属性</router-link>
                 <br>
-                <router-link to="/demo_directives">自定义指令</router-link>
+                <router-link to="/demo_directives" @click="clickF">自定义指令</router-link>
                 <br>
-                <router-link to="/demo_mixins">demo_mixins 混合</router-link>
+                <router-link to="/demo_mixins" @click="clickF">demo_mixins 混合</router-link>
                 <br>
-                <router-link to="/demo_v2ex">仿 V2EX</router-link>
+                <button class="btn btn-normal" @click="clickF">
+                    <router-link to="/demo_v2ex"><b>仿 V2EX</b></router-link>
+                </button>
                 <br>
             </div>
         </div>
@@ -49,7 +50,13 @@
         name: 'app',
         data () {
             return {
-                msg: 'Welcome to Your fdsfsdVue.js App'
+                msg: 'hello Vue!',
+                show: false
+            };
+        },
+        methods: {
+            clickF(){
+                this.show = true;
             }
         }
     }
@@ -68,17 +75,20 @@
         }
     }
 
-    img {
-        width: 20%;
-    }
-
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 100px;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        a {
+            text-decoration: none;
+        }
     }
 
 </style>
